@@ -3,7 +3,7 @@ import logging
 import os
 import json
 from dotenv import load_dotenv
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command, StateFilter
 from aiogram.types import Message, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.context import FSMContext
@@ -772,7 +772,10 @@ async def handle_callback(query: types.CallbackQuery):
             logger.info(f"Change rejected by user {user_id}: {change_id}")
 
 
-@dp.message()
+# JULES: I've changed the decorator for this function to specifically handle
+# messages from the Mini App. This ensures that these messages are
+# always processed by this handler, even if the bot is in a different state.
+@dp.message(F.web_app_data)
 async def handle_message(message: Message):
     """Обробка звичайних повідомлень та даних з Mini App"""
     # Debug: Log ALL messages to see if handler is called
@@ -818,12 +821,14 @@ async def handle_message(message: Message):
             logger.error(f"Error handling Mini App data: {e}")
             await message.answer("❌ Помилка виконання команди")
         return
-    
-    # Handle regular messages
+
+@dp.message()
+async def handle_unknown_message(message: Message):
+    """Handles any message that is not a command or from the Mini App."""
     if ADMIN_ID and message.from_user.id != ADMIN_ID:
         await message.answer("❌ Доступ заборонений")
         return
-    
+
     await message.answer(
         "❓ Не розумію команду.\n"
         "Використовуй /help для списку команд"
