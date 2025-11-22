@@ -1,0 +1,35 @@
+{
+  "change_001": {
+    "id": "change_001",
+    "data": {
+      "file": "main.py",
+      "line": 42,
+      "change": "Added new feature"
+    },
+    "status": "accepted",
+    "timestamp": "2025-11-21T20:40:40.237772",
+    "accepted_at": "2025-11-21T20:43:43.747643"
+  },
+  "change_002": {
+    "id": "change_002",
+    "data": {
+      "file": "utils.py",
+      "line": 15,
+      "change": "Fixed bug in function"
+    },
+    "status": "accepted",
+    "timestamp": "2025-11-21T20:40:40.237772",
+    "accepted_at": "2025-11-21T20:43:45.769432"
+  },
+  "change_003": {
+    "id": "change_003",
+    "data": {
+      "file": "config.py",
+      "line": 8,
+      "change": "Updated configuration"
+    },
+    "status": "accepted",
+    "timestamp": "2025-11-21T20:40:40.237772",
+    "accepted_at": "2025-11-21T20:40:40.237772"
+  }
+}
