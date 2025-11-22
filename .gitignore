@@ -1,25 +1,4 @@
 ```
-# Certs (assuming these are generated/development certificates)
-certs/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-venv/
-.venv/
-.env
-.env.local
-.env.*
-pyproject.toml
-setup.py
-dist/
-build/
-*.egg-info/
-.coverage
-htmlcov/
-.pytest_cache/
-.mypy_cache/
+# Documentation
+COLLABORATION.md
 ```
