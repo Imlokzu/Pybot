@@ -1,0 +1,58 @@
+🤖 TELEGRAM PC CONTROL BOT + MULTI-AGENT AI SYSTEM
+================================================
+
+✅ СИСТЕМА ГОТОВА!
+
+📁 Структура проєкту:
+├── main.py                    # Головний бот (запуск звідси)
+├── agents/
+│   ├── task_interpreter.py   # AI розпарсовує завдання
+│   ├── executor.py           # Виконує команди
+│   └── approval.py           # Підтвердження
+├── pc_control/
+│   ├── screen.py            # Скріншоти + OCR
+│   ├── click.py             # Клік миші
+│   ├── keyboard.py          # Клавіатура
+│   └── windows.py           # Контроль вікон
+├── .env                      # Конфіг (ЗАПОВНІТЬ!)
+├── requirements.txt          # Залежності (встановлені ✅)
+└── logs/                     # Логи
+
+🚀 ШВИДКИЙ СТАРТ:
+
+1. Відкрийте .env файл
+2. Заповніть:
+   - TELEGRAM_TOKEN (від @BotFather)
+   - ADMIN_ID (від @userinfobot)
+   - OPENAI_API_KEY (опціонально)
+
+3. Запустіть:
+   python main.py
+
+4. Напишіть боту в Telegram:
+   /start
+
+🎮 КОМАНДИ:
+- /start       - Запуск
+- /screenshot  - Скріншот
+- /task <...>  - Виконати завдання
+- /status      - Статус
+- /help        - Довідка
+
+📚 ДОКУМЕНТАЦІЯ:
+- README.md    - Повна документація
+- SETUP.md     - Детальний гайд встановлення
+
+🔒 БЕЗПЕКА:
+- Всі токени в .env (не комітьте!)
+- Доступ обмежений ADMIN_ID
+- Всі дії логуються
+
+✨ АРХІТЕКТУРА:
+User → Telegram Bot → Task Interpreter (AI)
+                    → Executor (готує команди)
+                    → Approval Agent (підтвердження)
+                    → PC Control (Screen, Click, Keyboard, Windows)
+                    → System (Windows 11)
+
+🎯 ГОТОВО ДО ВИКОРИСТАННЯ!

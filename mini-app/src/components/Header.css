@@ -1,0 +1,43 @@
+.header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(100, 200, 255, 0.05) 100%);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0096ff 0%, #64c8ff 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.header-text h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-text p {
+  font-size: 12px;
+  opacity: 0.6;
+  margin: 4px 0 0 0;
+}
+
+.app.dark .header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.app.light .header {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
